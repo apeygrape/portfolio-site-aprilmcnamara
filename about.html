@@ -1,35 +1,55 @@
 <!DOCTYPE html>
-<html lang="EN" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>April McNamara About</title>
-    <link href="/img/favicon.ico" rel="shortcut icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="img/aboutme/favicon.ico.png" rel="shortcut icon">
+    <script src="https://kit.fontawesome.com/ef4b6767a3.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AprilMcNamara- UI Designer Portland OR</title>
+    <link href="img/FV.png" rel="shortcut icon">
   </head>
-
+  
   <body>
     <header>
-      <picture>
-        <source media="(max-width:500px)" srcset="img/logo.svg" />
-
-        <img src="img/logo.svg" alt="April McNamara Logo" />
-      </picture>
-      <nav>
-        <ul>
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div>
+        <!-- placeholder for hyperlink name logo -->
+        <img src="img/logo.svg" alt="April McNamara" />
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">Work</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="files/resume.pdf" target="_blank">Resume</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <div>
-        <div>
+      <div id="about-title">
+        <div class="container">
           <h1>About</h1>
         </div>
       </div>
-      <div>
-        <div>
+      <div id="about">
+        <div class="container">
           <picture>
             <source
               media="(max-width:500px)"
@@ -38,9 +58,9 @@
             <img src="img/profilepicturex1.jpg" alt="Profile Image" />
           </picture>
         </div>
-        <div>
-          <!--Start column 1-->
-          <div>
+        <div class="container">
+          <div class="row">
+            <div class="my-story col-lg-7">
             <h2>My Story</h2>
 
             <p>
@@ -75,19 +95,18 @@
               yoga, making pottery, and spending time with my family.
             </p>
             <a href="files/resume.pdf" target="_blank" download
-              >Download My Resume
-            </a>
+            class="button"
+            >View My Resume</a
+            >
           </div>
           <!--End Column 1-->
           <div>
-            <!--Start Column 2-->
-            <div>
-              <h2>Skills & Tools</h2>
-            </div>
-            <div>
-              <!--Start Skills Column-->
-              <h3>Skills</h3>
-              <ul>
+            <div class="skills-tools col-lg-5 col-md-12">
+              
+              <div class="row">
+                <div class="skills col-md-6 col-lg-12-skills">
+              <h4>Skills</h4>
+                <ul>
                 <li>User research</li>
                 <li>Develop user profiles</li>
                 <li>User flows</li>
@@ -98,35 +117,33 @@
                 <li>Collaboration</li>
               </ul>
             </div>
-            <!--End Skills Column-->
-            <div>
-              <!--Start Tools Column-->
-              <h3>Tools</h3>
+            
+            <div class="skills col-md-6 col-lg-12-skills">
+               <h4>Tools</h4>
               <ul>
                 <li>Figma</li>
                 <li>Adobe XD</li>
                 <li>Adobe Illustrator</li>
                 <li>Adobe Photoshop</li>
                 <li>Adobe InDesign</li>
-
                 <li>Miro</li>
               </ul>
             </div>
-            <!--End Tools Column-->
+           
           </div>
-          <!--End Column 2-->
+          
         </div>
       </div>
+      <a href="#top" id="goTop">Back to Top</a>
     </main>
 
     <footer id="contact">
-      <div>
+      <div class="container">
         <h2>Get in Touch</h2>
       </div>
       <p>Let's connect and get started on your next creative project.</p>
-      <div><a href="mailto:apeygrape@gmail.com">Email Me</a></div>
-      <div>
-        <!--Social Media-->
+      <div><a href="mailto:apeygrape@gmail.com" class="button contact">Email Me</a></div>
+      <div class="social-icon">
         <a href="https://www.linkedin.com/in/aprilamcnamara/" target="_blank">
           <svg
             enable-background="new 0 0 32 32"
