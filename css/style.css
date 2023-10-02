@@ -40,40 +40,53 @@ body {
   
   h3 {
     font-size: 1.75em;
-    font-weight: 400;
+    font-weight: 600;
   }
   h4 {
     font-size: 1.35em;
     font-weight: 400;
   }
 
+
+  [class*="col-"] {
+    float:  left;
+    padding:10px
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 /*---------------header styling----------------*/
 
 header {
-    background-color: #ffffff;
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 3px 20px 16px rgba(0, 0, 0, 0.4)  ; 
-    text-align: center;
-
-    
-    
-  }
+  background-color: #fbfbfb;
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  height: auto;
+  min-height: 56px;
+  width: 100%;
+}
 
 .logo {
-    max-width: 300px;
-    
-    
-  }
+  max-width: 250px;
+  text-align: center;
+}
 
   nav  {
     display: inline-block;
-    width: 100%
+    width: auto;
+    float:
+  
   }
 
   nav > ul {
     list-style-type: none;
     padding: 0;
+    margin: 4px 0 4px 0;
   }
 
   nav > ul > li {
@@ -83,7 +96,7 @@ header {
   }
 
   nav > ul > li > a:visited {
-    padding: 0 100px;
+    padding: 0 15px;
     text-transform: uppercase;
     font-weight: 700;
     color: #4a4a4a;
@@ -96,15 +109,23 @@ header {
     padding: 0 15px;
   }
 
+  main {
+    padding-top: 44px;
+    background-color: #fbfbfb;
+  }
+
   #hero {
-    background-color: #ffffff;
-    padding: 20px 0;
     display: inline-block;
+    background-color: #b1b1b1;
+    padding: 0;
     width: 100%;
-    text-align: center; /* Centers text */
+  }
+
+  #hero span {
+    display: block;
+    
   }
  
-
   main {
     padding-top: 20px;
   }
@@ -122,15 +143,11 @@ header {
   }
  
   
-    .picme img {
-      width: 70%;
-      height: auto; /* preserve aspect ratio */
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      padding-top: 10px;
-      padding-bottom: 20px;
-    }
+    #picture 
+      .button:hover {
+        opacity: 0.8;
+      }
+   
 
 
 /*-----------------Navigation links----------------------------*/
@@ -144,14 +161,11 @@ a {
 
 a:hover,
 a:focus {
-  color: #3e3e3e;
+  color: #535353;
   text-decoration: none;
 }
 
-a:visited,
-a:focus {
-  color: #000000;
-}
+
 
 a:active,
 a:focus {
@@ -162,57 +176,24 @@ a:focus {
 /*-----------------Buttons----------------------------*/
 
 .button {
-    display: inline-block; /* Since the <a> tag is inline by default, we need to change this to inline-block */
-    background-color: #143a52;
-    color: #fdf7ed; /* Override the default link color */
-    font-weight: 500;
-    padding: 10px;
-    border-radius: 3px;
-    border-bottom: 2px solid #a1bbce; /* Width of the border, type, color */
-    transition: 0.2s opacity;
+  display: inline-block;
+  background-color: #143a52;
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #081c29;
+  transition: 0.2s opacity;
+}
+.button:hover {
+  opacity: 0.8;
 }
 
-.button:visited { /* Visited link */
-    color: #fdf7ed;
-}
-
-.button:hover,
-.button:focus {
-    opacity: 0.8; /* Reduces the opacity of the button to 80% */
-    text-decoration: none;
-}
 
 .button:active { /* Selected link */
-    color: #a1bbce;
+    color: #5d9dcb;
 }
-
-.button.contact,
-.button.resume {
-    background-color: transparent;
-    color: #143a52;
-    text-transform: uppercase;
-    border: 2px solid #143a52;
-    transition: .2s background-color, font-weight;
-}
-
-.button.contact:visited,
-.button.resume:visited { /* Visited link */
-    color: #143a52;
-}
-
-.button.contact:hover,
-.button.contact:focus,
-.button.resume:hover,
-.button.resume:focus {
-    background-color: #000000;
-    font-weight: 600;
-}
-
-.button.contact:active,
-.button.resume:active { /* Selected link */
-    color: #fdf7ed;
-}
-
 
 
 
@@ -239,4 +220,87 @@ a:focus {
     font-size: 40px;
     color: black;
     }
+
+
+    
+
+/*---------------animations---------------------*/
+
+@keyframes  {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+}
+
+
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
+
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* media queries */
+
+
+ /* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+}
+
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+}
+
+
+
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+
 
